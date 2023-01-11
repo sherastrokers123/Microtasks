@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NewComponent } from './components/NewComponents';
+
 function App() {
   const [students, setStudents] = useState([
     { id: 1, name: "James", age: 8 },
@@ -14,8 +15,9 @@ function App() {
     { id: 10, name: "Charles", age: 98 },
     { id: 11, name: "Christopher", age: 100 },
   ]
+
   )
-  return (
+  return 
     <NewComponent students={students} />
   );
 }
