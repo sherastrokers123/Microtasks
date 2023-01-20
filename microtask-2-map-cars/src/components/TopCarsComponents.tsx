@@ -6,20 +6,22 @@ type TopCarsComponentPropsType = {
 type TopCarPropsType = {
     manufacturer: string,
     model: string
-    key: number
 }
 export const TopCarsComponent = (props: TopCarsComponentPropsType) => {
     return (
         <ul>
             {props.topCars.map((topCarObjectFromTopCarsArray, index) => {
+                debugger
                 return (
-                    <li key={topCarObjectFromTopCarsArray.key}>
-                        <span> {topCarObjectFromTopCarsArray.manufacturer} </span>
-                        <span> {topCarObjectFromTopCarsArray.model} </span>
+                    <li key={index + 1}>
+                        <span>{topCarObjectFromTopCarsArray.manufacturer}</span>
+                        <span>{topCarObjectFromTopCarsArray.model}</span>
                     </li>
+
                 )
             })}
 
         </ul>
     )
 };
+
